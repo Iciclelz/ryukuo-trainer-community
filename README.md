@@ -1,0 +1,1 @@
+# ryukuo-trainer-community
