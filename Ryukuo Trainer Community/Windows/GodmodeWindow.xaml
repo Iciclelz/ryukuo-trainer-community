@@ -1,0 +1,21 @@
+﻿<Window x:Name="godmodeWindow" x:Class="Ryukuo_Trainer_Community.Windows.GodmodeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ryukuo_Trainer_Community.Windows"
+        mc:Ignorable="d"
+        Title="GodMode" Height="107.989" Width="246.867" WindowStyle="ToolWindow" ResizeMode="NoResize" Foreground="White" Background="Black" Loaded="godmodeWindow_Loaded">
+    <Grid>
+        <RadioButton x:Name="fullGodmodeRadioButton" Content="Full GodMode" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Background="White" Foreground="White"/>
+        <RadioButton x:Name="fiftyNineGodmodeRadioButton" Content="58 Second GodMode" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Background="White" Foreground="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="168,5,0,0" VerticalAlignment="Top" Width="50" MouseLeftButtonDown="backRectangle_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <ImageBrush
+        ImageSource="pack://application:,,,/icons/back-icon-2.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <CheckBox x:Name="perfectStanceCheckBox" Content="Perfect Stance" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Background="White" Foreground="White"/>
+
+    </Grid>
+</Window>

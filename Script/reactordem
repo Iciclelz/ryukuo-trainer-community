@@ -1,0 +1,9 @@
+//GMS 170.2
+[Enable]
+00E2A19A:
+db 00
+
+
+[Disable]
+00E2A19A: //01 00 00 00 D8 D1 DF E0
+db 01

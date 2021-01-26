@@ -1,0 +1,29 @@
+//FMA 170.2
+//updated by Noire~
+[enable]
+alloc(hook,128)
+label(return)
+label(return_true)
+
+0058D270: //8B 54 24 ?? 8b 42 ?? 55 56 8B 74 24 ??
+db 90 90
+jmp hook
+return:
+
+hook:
+cmp [esp],00b8dbed // 8B 9C 24 ?? 00 00 00 83 C4 0C 85 C0 75 0F 81 FB ?? ?? ?? ?? 75 7F 83 7C [First Result]
+je return_true //<-if this isnt je, delete it and use this script
+mov edx,[esp+08]
+mov eax,[edx+0C]
+jmp return
+
+return_true:
+mov eax,00000001
+ret
+
+[disable]
+0058D270:
+mov edx,[esp+08]
+mov eax,[edx+0C]
+
+dealloc(hook)

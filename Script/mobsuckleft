@@ -1,0 +1,8 @@
+//GMS 170.2
+[ENABLE]
+017ABDA0:
+db D8 D9
+
+[DISABLE]
+017ABDA0: //D9 C9 DC ? ? ? DC [Third Result]
+db D9 C9

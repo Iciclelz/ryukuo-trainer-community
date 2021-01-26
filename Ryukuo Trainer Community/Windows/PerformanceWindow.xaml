@@ -1,0 +1,19 @@
+﻿<Window x:Name="performanceWindow" x:Class="Ryukuo_Trainer_Community.Windows.PerformanceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ryukuo_Trainer_Community.Windows"
+        mc:Ignorable="d"
+        Title="Performance" Height="94.463" Width="212.803" Background="Black" Foreground="Black" ResizeMode="NoResize" WindowStyle="ToolWindow" Loaded="performanceWindow_Loaded">
+    <Grid>
+        <CheckBox x:Name="cpuHackCheckBox" Content="CPU Hack" HorizontalAlignment="Left" Margin="106,14,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <CheckBox x:Name="noFadeStagesCheckBox" Content="No Fade Stages" HorizontalAlignment="Left" Margin="76,34,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Rectangle x:Name="backRectangle" HorizontalAlignment="Left" Height="40" Margin="10,9,0,0" VerticalAlignment="Top" Width="40" MouseLeftButtonDown="backRectangle_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://application:,,,/icons/back-icon.png" />
+            </Rectangle.Fill>
+        </Rectangle>
+
+    </Grid>
+</Window>

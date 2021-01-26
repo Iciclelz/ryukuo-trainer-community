@@ -1,0 +1,19 @@
+[ENABLE]
+01622851:
+db 90 90
+
+0166D50F:
+db 90 90
+
+016F87F5:
+db BF 00
+
+[DISABLE]
+01622851: // 7D ? 33 FF 68
+db 7D 02
+
+0166D50F: // 7D ? 33 F6 81 [Third Result]
+db 7D 02
+
+016F87F5: // BF 01 00 00 00 01 BE [Second Result]
+db BF 01

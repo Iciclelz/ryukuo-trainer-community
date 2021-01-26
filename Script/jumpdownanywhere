@@ -1,0 +1,20 @@
+//GMS 170.2
+[ENABLE]
+00B4F149:
+db EB
+
+01646CD7:
+db 90 90
+
+016F6D80:
+db EB
+
+[DISABLE]
+00B4F149: //7D ? 8B ? 8B ? ? 8D ? ? ? 50 8B CE [First Result]
+db 7D
+
+01646CD7: //74 ? 8B CB C7 83 [Second Result]
+db 74 35
+
+016F6D80: //74 ? 3B ? ? ? 75 ? 8B ? ? ? 3B
+db 74

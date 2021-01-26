@@ -1,0 +1,30 @@
+//GMS 170.2
+//updated by nathanjo
+[ENABLE]
+00733227: // Somewhere down CDropPool::TryPickUpDrop
+cmp [esi+48],0 // Follow jne 0073328F -> mov ecx,[esi+48]
+jz 00733238 // lea ecx,[esp+20]
+push ecx
+mov ecx,[esp+4C] // Follow jne 0073328F -> mov eax,[esp+4C]
+mov [ecx],ebp
+mov [ecx+4],eax
+pop ecx
+jmp 0073328F // Address in jne
+dw 9090
+
+018E26C0: // CWvsContext::SendBoobyTrapAlert
+ret 0004
+
+[DISABLE]
+00733227: // 85 C0 75 ? 8D ? 24 ? C7 ? 24 ? ? ? ? ? E8 ? ? ? ? 8B
+push eax
+push ebp
+lea eax,[esp+30]
+push eax
+call dword ptr [020D090C]
+test eax,eax
+jne 0073328F
+lea ecx,[esp+20]
+
+018E26C0: // push FF/-01 below: E9 ? ? ? ? CC CC CC CC CC 6A FF 68 ? ? ? ? 64 A1 ? ? ? ? 50 83 ? ? A1 [Third result]
+db 6A FF 68

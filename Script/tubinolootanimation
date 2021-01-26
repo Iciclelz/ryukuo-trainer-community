@@ -1,0 +1,27 @@
+//v170.2
+//updated by nathanjo
+[ENABLE]
+alloc(Tubi,64)
+label(Ret)
+
+Tubi:
+mov eax, 0
+push esi
+jmp Ret
+
+0182D3D0:
+jmp Tubi
+Ret:
+
+0050ABC6: // Remove loot animation
+db 81 FE 00 00 00 00
+
+[DISABLE]
+0182D3D0: // FUNCTION START (mov eax,[esp+04]): 8D 8E ? ? 00 00 E8 ? ? ? ? E8 ? ? ? ? 50
+mov eax,[esp+04]
+push esi
+
+0050ABC6: // 81 ? ? ? 00 00 0F 8D ? ? 00 00 85 ? 0F 84 [1st Result]
+db 81 FE BC 02 00 00
+
+dealloc(Tubi)

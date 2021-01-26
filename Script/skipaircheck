@@ -1,0 +1,20 @@
+// Updated to 170.2 by Acen
+[ENABLE]
+01687B9:
+db EB
+
+016849C6:
+db 90 E9
+
+0169E864:
+db EB
+
+[DISABLE]
+01687B9: // 75 ? 8B 8D ? ? ? ? 8B ? 8B 8D [First Result]
+db 75
+
+016849C6: // 0F 85 ? ? ? ? 8B 8D ? ? ? ? E8 ? ? ? ? 85 C0 74
+db 0F 85
+
+0169E864: // 74 ? 8B 8D ? ? ? ? E8 ? ? ? ? 85 C0 74 ? 81
+db 74

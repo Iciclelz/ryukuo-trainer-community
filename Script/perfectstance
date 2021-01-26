@@ -1,0 +1,16 @@
+//Perfect Stance by AIRRIDE v170.2
+[Enable]
+016B0DC4: //85 F6 75 ? 39 ? 24 ? ? ? ? 74
+xor esi,esi
+nop
+nop
+
+016B0DCF: //address of JE below
+db EB
+
+[Disable]
+016B0DC4:
+db 85 F6 75 09
+
+016B0DCF:
+db 74

@@ -1,0 +1,32 @@
+[ENABLE]
+00AF4BDC: // CWvsPhysicalSpace2D::Load //E8 ?? ?? ?? ?? 6A 01 8B CF E8 ?? ?? ?? ?? 6A 01 8B CF E8
+db 90 90 90 90 90
+
+00AF4BE5: // CMapLoadable::RestoreTile // call below ^
+db 90 90 90 90 90
+
+00AF4BEE: // CMapLoadable::RestoreBack // call below ^
+db 90 90 90 90 90
+
+00AF4BF5: // CMapLoadable::RestoreWeather // call below ^
+db 90 90 90 90 90
+
+00B7F470: // No mob reaction, hitmarks or damage // 8B 80 ? ? ? ? 3B ? ? ? 75 [scroll up until you see "push -01"]
+db C2 60 00 90 90 90 90
+
+[DISABLE]
+00AF4BDC:
+call 00AE13A0
+
+00AF4BE5:
+call 00AF4090
+
+00AF4BEE:
+call 00AEB470
+
+00AF4BF5:
+call 00ADEDB0
+
+00B7F470: // FUNCTION START (push -01): 8B 80 ? ? ? ? 3B ? ? ? 75 [scroll up until you see "push -01"]
+push -01
+push 01A3CA88

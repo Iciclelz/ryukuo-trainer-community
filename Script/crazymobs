@@ -1,0 +1,8 @@
+//GMS 170.2
+[Enable]
+00BE0396: //D9 C0 D8 C9 D9 C0
+db D9 C1
+
+[Disable]
+00BE0396:
+db D9 C0

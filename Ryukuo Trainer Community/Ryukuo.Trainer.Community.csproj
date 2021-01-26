@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BBAFCC46-38F3-46F7-A0A5-3949BCC836DA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ryukuo_Trainer_Community</RootNamespace>
+    <AssemblyName>Ryukuo Trainer Community</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>ryukuo-trainer-community.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Windows\AutosWindow.xaml.cs">
+      <DependentUpon>AutosWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CharacterWindow.xaml.cs">
+      <DependentUpon>CharacterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\GodmodeWindow.xaml.cs">
+      <DependentUpon>GodmodeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MobControlWindow.xaml.cs">
+      <DependentUpon>MobControlWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PerformanceWindow.xaml.cs">
+      <DependentUpon>PerformanceWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CheatEngine.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Windows\AutosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CharacterWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\GodmodeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MobControlWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PerformanceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Aiyou-Address-Book-icon.png" />
+    <Resource Include="Icons\analog-icon.png" />
+    <Resource Include="Icons\appstore-icon.png" />
+    <Resource Include="Icons\Cake-001-icon.png" />
+    <Resource Include="Icons\Cake-002-icon.png" />
+    <Resource Include="Icons\Cake-003-icon.png" />
+    <Resource Include="Icons\Cake-004-icon.png" />
+    <Resource Include="Icons\Cake-005-icon.png" />
+    <Resource Include="Icons\Cake-006-icon.png" />
+    <Resource Include="Icons\chess-icon.png" />
+    <Resource Include="Icons\cloud-icon.png" />
+    <Resource Include="Icons\cupcake-cake-cherry-icon.png" />
+    <Resource Include="Icons\cupcake-cake-hearts-icon.png" />
+    <Resource Include="Icons\cupcake-cake-icon.png" />
+    <Resource Include="Icons\cupcake-cake-stars-icon.png" />
+    <Resource Include="Icons\cupcake-cake-vanilla-icon.png" />
+    <Resource Include="Icons\dashboard-icon.png" />
+    <Resource Include="Icons\Dashi-Dashboard-icon.png" />
+    <Resource Include="Icons\folder-2-icon.png" />
+    <Resource Include="Icons\folder-icon.png" />
+    <Resource Include="Icons\fraise-icon.png" />
+    <Resource Include="Icons\Fuji-Finder-icon.png" />
+    <Resource Include="Icons\games-folder-icon.png" />
+    <Resource Include="Icons\github-icon.png" />
+    <Resource Include="Icons\minecraft-icon.png" />
+    <Resource Include="Icons\Mosu-Burn-icon.png" />
+    <Resource Include="Icons\msn-icon.png" />
+    <Resource Include="Icons\pepper-1-icon.png" />
+    <Resource Include="Icons\pepper-10-icon.png" />
+    <Resource Include="Icons\pepper-11-icon.png" />
+    <Resource Include="Icons\pepper-12-icon.png" />
+    <Resource Include="Icons\pepper-13-icon.png" />
+    <Resource Include="Icons\pepper-14-icon.png" />
+    <Resource Include="Icons\pepper-15-icon.png" />
+    <Resource Include="Icons\pepper-16-icon.png" />
+    <Resource Include="Icons\pepper-2-icon.png" />
+    <Resource Include="Icons\pepper-3-icon.png" />
+    <Resource Include="Icons\pepper-4-icon.png" />
+    <Resource Include="Icons\pepper-5-icon.png" />
+    <Resource Include="Icons\pepper-6-icon.png" />
+    <Resource Include="Icons\pepper-7-icon.png" />
+    <Resource Include="Icons\pepper-8-icon.png" />
+    <Resource Include="Icons\pepper-9-icon.png" />
+    <Resource Include="Icons\Sayonara-Spinning-Ball-icon.png" />
+    <Resource Include="Icons\Sousa-Safari-icon.png" />
+    <Resource Include="Icons\terminal-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\back-icon-2.png" />
+    <Resource Include="Icons\back-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\world-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\discord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\reaper.png" />
+    <Resource Include="Icons\youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryukuo-trainer-community.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

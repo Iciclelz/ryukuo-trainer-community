@@ -1,0 +1,36 @@
+﻿<Window x:Name="autoWindow" x:Class="Ryukuo_Trainer_Community.Windows.AutosWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ryukuo_Trainer_Community.Windows"
+        mc:Ignorable="d"
+        Title="Autos" Height="299.319" Width="408.231" Background="Black" WindowStyle="ToolWindow" Loaded="autoWindow_Loaded">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="100" Margin="292,126,0,0" VerticalAlignment="Top" Width="100">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://application:,,,/icons/Aiyou-Address-Book-icon.png" />
+            </Rectangle.Fill>
+        </Rectangle>
+        <CheckBox x:Name="autoAttackCheckBox" Content="Auto Attack" HorizontalAlignment="Left" Margin="25,32,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="autoAttackTextBox" Height="23" Margin="130,30,0,0" TextWrapping="Wrap" Text="250" VerticalAlignment="Top" Width="120" Background="Black" Foreground="White" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+        <CheckBox x:Name="autoLootCheckBox" Content="Auto Loot" HorizontalAlignment="Left" Margin="25,62,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="autoLootTextBox" Height="23" Margin="130,60,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="120" Background="Black" Foreground="White" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+        <CheckBox x:Name="autoSkillOneCheckBox" Content="Skill 1" HorizontalAlignment="Left" Margin="25,115,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="autoSkillOneTextBox" Height="23" Margin="130,113,0,0" TextWrapping="Wrap" Text="170000" VerticalAlignment="Top" Width="120" Background="Black" Foreground="White" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+        <CheckBox x:Name="autoSkillTwoCheckBox" Content="Skill 2" HorizontalAlignment="Left" Margin="25,145,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="autoSkillTwoTextBox" Height="23" Margin="130,143,0,0" TextWrapping="Wrap" Text="170000" VerticalAlignment="Top" Width="120" Background="Black" Foreground="White" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+        <CheckBox x:Name="autoSkillThreeCheckBox" Content="Skill 3" HorizontalAlignment="Left" Margin="25,175,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="autoSkillThreeTextBox" Height="23" Margin="130,173,0,0" TextWrapping="Wrap" Text="170000" VerticalAlignment="Top" Width="120" Background="Black" Foreground="White" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+        <CheckBox x:Name="autoSkillFourCheckBox" Content="Skill 4" HorizontalAlignment="Left" Margin="25,205,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="autoSkillFourTextBox" Height="23" Margin="130,203,0,0" TextWrapping="Wrap" Text="170000" VerticalAlignment="Top" Width="120" Background="Black" Foreground="White" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+        <CheckBox x:Name="autoSkillFiveCheckBox" Content="Skill 5" HorizontalAlignment="Left" Margin="25,235,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="autoSkillFiveTextBox" Height="23" Margin="130,233,0,0" TextWrapping="Wrap" Text="170000" VerticalAlignment="Top" Width="120" Background="Black" Foreground="White" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+
+        <Rectangle x:Name="backRectangle" HorizontalAlignment="Left" Height="40" Margin="320,30,0,0" VerticalAlignment="Top" Width="40" MouseLeftButtonDown="backRectangle_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="pack://application:,,,/icons/back-icon.png" />
+            </Rectangle.Fill>
+        </Rectangle>
+    </Grid>
+</Window>

@@ -1,0 +1,57 @@
+﻿<Window x:Name="mobControlWindow" x:Class="Ryukuo_Trainer_Community.Windows.MobControlWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ryukuo_Trainer_Community.Windows"
+        mc:Ignorable="d"
+        Title="Mob Control" Height="344.262" Width="414.754" ResizeMode="NoResize" WindowStyle="ToolWindow" Foreground="White" Background="Black" FontFamily="Times New Roman" Loaded="mobControlWindow_Loaded">
+    <Grid>
+        <GroupBox x:Name="groupBox" Header="Mob" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="202" Width="269">
+            <Grid Margin="0,0,-110,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="278*"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox x:Name="mobSpeedUpCheckBox" Content="Faster Mobs" HorizontalAlignment="Left" Margin="1,25,0,0" VerticalAlignment="Top" Foreground="#FF35EDFF" Grid.Column="1" Grid.ColumnSpan="2"/>
+                <CheckBox x:Name="mobFuckupCheckBox" Content="Crazy Mobs" HorizontalAlignment="Left" Margin="0,52,0,0" VerticalAlignment="Top" Foreground="#FF35EDFF" Grid.Column="1" Grid.ColumnSpan="2"/>
+                <CheckBox x:Name="autoAggroCheckBox" Content="Auto Aggro" HorizontalAlignment="Left" Margin="0,82,0,0" VerticalAlignment="Top" Foreground="#FF35EDFF" Grid.Column="1" Grid.ColumnSpan="2"/>
+                <CheckBox x:Name="mobDisarmCheckBox" Content="Mob Disarm" HorizontalAlignment="Left" Margin="1,109,0,0" VerticalAlignment="Top" Foreground="#FF35EDFF" Grid.Column="1" Grid.ColumnSpan="2"/>
+                <CheckBox x:Name="mobFreezeCheckBox" Content="Mob Freeze" HorizontalAlignment="Left" Margin="0,138,0,0" VerticalAlignment="Top" Foreground="#FF35EDFF" Grid.Column="1" Grid.ColumnSpan="2"/>
+                <Rectangle HorizontalAlignment="Left" Height="115" Margin="90,37,0,0" VerticalAlignment="Top" Width="133" Grid.Column="2">
+                    <Rectangle.Fill>
+                        <ImageBrush
+                			ImageSource="/Ryukuo Trainer Community;component/Icons/chess-icon.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBox1" Header="boss" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Height="90" Width="269">
+            <Grid>
+                <CheckBox x:Name="noMagnusBallCheckBox" Content="No Falling Projectiles" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="#FF00F9D7" Background="White"/>
+                <Rectangle HorizontalAlignment="Left" Height="68" Margin="147,0,0,0" VerticalAlignment="Top" Width="100">
+                    <Rectangle.Fill>
+                        <ImageBrush
+                			ImageSource="/Ryukuo Trainer Community;component/Icons/cloud-icon.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBox2" Header="Push and Suck" HorizontalAlignment="Left" Margin="294,10,0,0" VerticalAlignment="Top" Height="202" Width="104">
+            <Grid Margin="2,10,-2,2">
+                <RadioButton x:Name="noSuckRadioButton" Content="No Suck" HorizontalAlignment="Left" Margin="4,23,0,0" VerticalAlignment="Top" Foreground="White"/>
+                <RadioButton x:Name="suckRightRadioButton" Content="Suck Right" HorizontalAlignment="Left" Margin="0,57,0,0" VerticalAlignment="Top" Foreground="Red"/>
+                <RadioButton x:Name="suckLeftRadioButton" Content="Suck Left" HorizontalAlignment="Left" Margin="4,97,0,0" VerticalAlignment="Top" Foreground="#FFFB0404"/>
+                <RadioButton x:Name="suckBothRadioButton" Content="Suck Both" HorizontalAlignment="Left" Margin="4,133,0,0" VerticalAlignment="Top" Foreground="#FF008BFF"/>
+            </Grid>
+        </GroupBox>
+        <Rectangle HorizontalAlignment="Left" Height="78" Margin="307,231,0,0" VerticalAlignment="Top" Width="78" MouseLeftButtonDown="backRectangle_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <ImageBrush
+        			ImageSource="/Ryukuo Trainer Community;component/Icons/back-icon-2.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+    </Grid>
+</Window>

@@ -1,0 +1,14 @@
+//GMS 170.2
+[ENABLE]
+0187B693:
+db 90 E9
+
+018E1FBE:
+db 90 E9
+
+[DISABLE]
+0187B693: // 0F 85 ? ? ? ? 8B ? ? ? 8B ? ? 8B ? C1
+db 0F 85
+
+018E1FBE: // 0F 85 ? ? ? ? 83 ? ? 0F 84 ? ? ? ? 85 [Second Result]
+db 0F 85
